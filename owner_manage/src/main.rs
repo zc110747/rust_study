@@ -17,6 +17,9 @@ fn main() {
     let s4 = format!("format, {s3}");
     println!("s4:{s4}");
 
+    let s5 = (s4.clone(), s4.len());
+    println!("s5:{:?}", s5);
+
     //copy trait
     //整型，布尔型，浮点型，
     //字符型，元组，数组
@@ -28,7 +31,7 @@ fn main() {
     //{:#?} shows compositon type with wrap
     let a:[i16;2] = [1, 2];
     let a1 = a;
-    println!("{:#?}, {:#?}", a, a1);
+    println!("{:#?}, {:?}", a, a1);
 
     let t:(u8, u16, [i32;2]) = (1, 5, [2, 4]);
     let t1 = t;
