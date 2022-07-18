@@ -37,6 +37,13 @@ fn main() {
     let t1 = t;
     println!("{:?}, {:?}", t, t1);
 
+    //reference
+    //&, not get ownership
+    let u0 = get_length(&(s5.0));
+    println!("s5:{:?}, u0:{u0}", s5);
+
+    let s6 = s5.0.clone();
+    println!("{s6}, {:?}", s5);
 
 }
 
@@ -48,4 +55,8 @@ fn get_ownership(s:String) -> String{
 
     let s2 = String::from(" Get");
     s + &s2
+}
+
+fn get_length(s : &String) -> usize{
+    s.len()
 }
