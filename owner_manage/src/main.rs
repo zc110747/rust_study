@@ -42,8 +42,14 @@ fn main() {
     let u0 = get_length(&(s5.0));
     println!("s5:{:?}, u0:{u0}", s5);
 
-    let s6 = s5.0.clone();
+    let mut s6 = s5.0.clone();
     println!("{s6}, {:?}", s5);
+
+    //referenece mut var
+    //1.in each timer, only one valid mutable reference
+    //2.reference must be valid
+    let s7 = &mut s6;
+    println!("s7:{s7}");
 
 }
 
